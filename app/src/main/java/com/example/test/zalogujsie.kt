@@ -15,10 +15,10 @@ class zalogujsie : AppCompatActivity() {
         val pacjentbutton = findViewById<Button>(R.id.pacjentbutton12)
         val lekarzbutton = findViewById<Button>(R.id.lekarzbutton12)
         val cofnijbutton = findViewById<Button>(R.id.cofnij1)
-        val database = FirebaseDatabase.getInstance()
-        val myRef = database.getReference("message")
+        //val database = FirebaseDatabase.getInstance()
+        //val myRef = database.getReference("message")
 
-        myRef.setValue("Hello, World!")
+        //myRef.setValue("Hello, World!")
 
         pacjentbutton.setOnClickListener {
             val intent = Intent(context, zalogujsiepacjent::class.java)

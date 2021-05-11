@@ -22,6 +22,7 @@ class profilpacjenta : AppCompatActivity() {
         Toast.makeText(this, "Pomyślnie zalogowano", Toast.LENGTH_SHORT).show()
         val wyloguj = findViewById<Button>(R.id.wyloguj)
         val poleTekstowe = findViewById<TextView>(R.id.textView)
+        val zapiszsie = findViewById<Button>(R.id.umowwizytybutton)
 
 
 
@@ -29,20 +30,25 @@ class profilpacjenta : AppCompatActivity() {
 
         database = FirebaseDatabase.getInstance()
         databaseReference = database?.reference!!.child("Users")
+        var database1=FirebaseDatabase.getInstance().getReference("Users")
 
         val user = auth.currentUser
-        val userref = databaseReference?.child(user?.uid!!)
+        val userref = database1.child(user?.uid!!)
        // val database = FirebaseDatabase.getInstance()
        // val myRef = database.getReference("message")
+        var email = user.email
+
 
         //myRef.setValue("Hello, World!")
+
 
         userref?.addValueEventListener(object: ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
             override fun onDataChange(snapshot: DataSnapshot) {
-                poleTekstowe.text= ("Witaj " + snapshot.child("name").value.toString())
+              //  poleTekstowe.text= ("Witaj " +  snapshot.child("name").value.toString())
+                poleTekstowe.text= ("Witaj " +  user.email)
 
             }
         })
@@ -52,6 +58,13 @@ class profilpacjenta : AppCompatActivity() {
             FirebaseAuth.getInstance().signOut()
 
             startActivity(Intent(this@profilpacjenta, MainActivity::class.java))
+            finish()
+
+        }
+        zapiszsie.setOnClickListener {
+
+
+            startActivity(Intent(this@profilpacjenta, zapiszsienawizyte::class.java))
             finish()
 
         }

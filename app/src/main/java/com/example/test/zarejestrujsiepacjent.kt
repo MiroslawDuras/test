@@ -45,7 +45,7 @@ class zarejestrujsiepacjent : AppCompatActivity() {
         database1 = FirebaseDatabase.getInstance()
         database2=FirebaseDatabase.getInstance()
         reference=database1.getReference("Users")
-        reference2=database1.getReference("Lekarze")
+       // reference=database1.getReference("Lekarze")
         //database = FirebaseDatabase.getInstance()
         //databaseReference = database?.reference!!.child("ProfilUzytkownika")
 
@@ -95,17 +95,17 @@ class zarejestrujsiepacjent : AppCompatActivity() {
 
                         val currentUser = auth.currentUser
 
-                        var model = DaneUzytkownika(name, surname, email, password)
+                       var model = DaneUzytkownika(name, surname, email, password)
                         var id=reference.push().key
                         reference.child(id!!).setValue(model)
 
                         var model1 = DaneLekarzy("Stanisław", "Mazur", "stan@gmail.com", "123456", "Wrocław", "Kardiolog")
-                        var model2 = DaneLekarzy("Maciej", "Kania", "mac@gmail.com", "123456", "Warszawa", "Anestezjolog")
-                        var model3 = DaneLekarzy("Karolina", "Pieczarka", "kar@gmail.com", "123456", "Wieluń", "Gastrolog")
-                        var id2=reference2.push().key
-                        reference.child(id2!!).setValue(model1)
-                        reference.child(id2!!).setValue(model2)
-                        reference.child(id2!!).setValue(model3)
+                       // var model2 = DaneLekarzy("Maciej", "Kania", "mac@gmail.com", "123456", "Warszawa", "Anestezjolog")
+                       // var model3 = DaneLekarzy("Karolina", "Pieczarka", "kar@gmail.com", "123456", "Wieluń", "Gastrolog")
+                        //var id2=reference.push().key
+                        //reference.child(id2!!).setValue(model1)
+                        //reference.child(id2!!).setValue(model2)
+                       // reference.child(id2!!).setValue(model3)
 
 
                        // val currentUSerDatabase = databaseReference?.child((currentUser?.uid!!))

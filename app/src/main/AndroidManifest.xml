@@ -9,24 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Test">
-    <activity android:name=".profilpacjenta" />
-    <activity android:name=".profillekarza" />
-    <activity android:name=".pomyslniezarejestrowanopacjent" />
-    <activity android:name=".pomyslniezarejestrowanolekarz" />
-    <activity android:name=".zarejestrujsiepacjent" />
-    <activity android:name=".zarejestrujsielekarz" />
-    <activity android:name=".zarejestrujsie" />
-    <activity android:name=".zalogujsiepacjent" />
-    <activity android:name=".zalogujsielekarz" />
-    <activity android:name=".zalogujsie" />
-    <activity android:name=".MainActivity2" />
-    <activity android:name=".MainActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".zapiszsienawizyte"></activity>
+        <activity android:name=".profilpacjenta" />
+        <activity android:name=".profillekarza" />
+        <activity android:name=".pomyslniezarejestrowanopacjent" />
+        <activity android:name=".pomyslniezarejestrowanolekarz" />
+        <activity android:name=".zarejestrujsiepacjent" />
+        <activity android:name=".zarejestrujsielekarz" />
+        <activity android:name=".zarejestrujsie" />
+        <activity android:name=".zalogujsiepacjent" />
+        <activity android:name=".zalogujsielekarz" />
+        <activity android:name=".zalogujsie" />
+        <activity android:name=".MainActivity2" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-</application>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
 </manifest>
